@@ -52,6 +52,11 @@
   }
 
   if (markerInput && markerPreview) {
+    markerPreview.addEventListener("error", function () {
+      markerPreview.src = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Crect width='1200' height='800' fill='%23f6f8fb'/%3E%3Crect x='60' y='60' width='1080' height='680' fill='none' stroke='%231f2933' stroke-width='18'/%3E%3Ccircle cx='250' cy='230' r='110' fill='%23167c80'/%3E%3Ccircle cx='950' cy='230' r='110' fill='%23f0b429'/%3E%3Cpolygon points='600,145 735,365 465,365' fill='%231f2933'/%3E%3Ctext x='600' y='465' font-family='Arial, Helvetica, sans-serif' font-size='54' font-weight='700' text-anchor='middle' fill='%231f2933'%3EMARCADOR RA%3C/text%3E%3Ctext x='600' y='540' font-family='Arial, Helvetica, sans-serif' font-size='30' font-weight='700' text-anchor='middle' fill='%231f2933'%3EReemplaza assets/images/marcador.jpg%3C/text%3E%3C/svg%3E";
+      markerPreview.alt = "Marcador de ejemplo generado mientras se reemplaza assets/images/marcador.jpg";
+    });
+
     markerInput.addEventListener("change", function () {
       const file = markerInput.files && markerInput.files[0];
       if (!file) {
