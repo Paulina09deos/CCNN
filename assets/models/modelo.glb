@@ -1,6 +1,0 @@
-ARCHIVO DE EJEMPLO
-
-Reemplaza este archivo por un modelo GLB real y manten el nombre:
-assets/models/modelo.glb
-
-El visor detecta este placeholder y muestra una alerta en lugar de intentar cargarlo como modelo 3D.
