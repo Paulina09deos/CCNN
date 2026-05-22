@@ -25,7 +25,121 @@
     <section class="hero">
       <div class="hero-content">
         <p class="eyebrow">AR.js + A-Frame + GitHub Pages</p>
-        <h1>Realidad aumentada educativa gratuita desde el celular</h1>
+        <h1>Reali<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REALIDAD AUMENTADA</title>
+  <meta name="description" content="Experiencias educativas gratuitas de realidad aumentada con AR.js, A-Frame y GitHub Pages.">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <script src="js/experiences.js" defer></script>
+  <script src="js/creator.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="top-nav" aria-label="Navegacion principal">
+      <a class="brand" href="index.html">REALIDAD AUMENTADA</a>
+      <div class="nav-actions">
+        <a href="creator.html" data-role-link="teacher">Crear</a>
+        <a href="viewer.html">Ver RA</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">AR.js + A-Frame + GitHub Pages</p>
+        <h1>REALIDAD AUMENTADA</h1>
+        <p class="hero-copy">
+          Crea experiencias educativas con marcador personalizado, modelo 3D GLB,
+          enlace unico y codigo QR para estudiantes.
+        </p>
+        <div class="button-row">
+          <a class="button primary" href="creator.html">Crear experiencia</a>
+          <a class="button secondary" href="viewer.html">Ver realidad aumentada</a>
+          <a class="button ghost" href="#qr">Generar QR</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-wrap role-panel" aria-label="Ingreso por rol">
+      <div>
+        <p class="eyebrow">Usuarios</p>
+        <h2>Selecciona tu rol</h2>
+        <p>El modo docente habilita creacion, validacion, QR descargable y galeria. El modo estudiante abre solo las experiencias RA.</p>
+      </div>
+      <div class="role-actions">
+        <button class="button primary" type="button" data-set-role="teacher">Ingresar como docente</button>
+        <button class="button secondary" type="button" data-set-role="student">Ingresar como estudiante</button>
+      </div>
+      <p class="role-status" data-role-status>Rol actual: docente</p>
+    </section>
+
+    <section class="section-grid" aria-label="Instrucciones principales">
+      <article class="info-card">
+        <span class="step">1</span>
+        <h2>Docentes</h2>
+        <p>Crea una experiencia, asocia su modelo GLB con su imagen marcador, genera el QR y valida el registro.</p>
+      </article>
+      <article class="info-card">
+        <span class="step">2</span>
+        <h2>Estudiantes</h2>
+        <p>Escanea el QR, permite la camara y apunta hacia el marcador para ver el modelo 3D.</p>
+      </article>
+      <article class="info-card">
+        <span class="step">3</span>
+        <h2>GitHub Pages</h2>
+        <p>Sin backend: los registros se guardan en localStorage y los archivos reales deben publicarse en el repositorio para funcionar en cualquier celular.</p>
+      </article>
+    </section>
+
+    <section class="content-band teacher-only" id="qr">
+      <div class="content-wrap two-columns">
+        <div>
+          <p class="eyebrow">Codigo QR</p>
+          <h2>Genera un QR para una experiencia</h2>
+          <p>Escribe la URL publica de <strong>viewer.html?id=ID</strong> o usa el boton para completar la URL actual.</p>
+          <label class="field-label" for="qr-url">URL del visor</label>
+          <div class="input-action">
+            <input id="qr-url" type="url" placeholder="https://usuario.github.io/repositorio/viewer.html?id=celula-animal">
+            <button class="button secondary" type="button" data-fill-viewer-url>Usar URL actual</button>
+          </div>
+          <div class="button-row compact">
+            <button class="button primary" type="button" data-generate-qr>Generar QR</button>
+            <button class="button secondary" type="button" data-download-qr>Descargar QR</button>
+          </div>
+          <p class="helper-text" data-qr-message>El QR apuntara directamente al visor RA.</p>
+        </div>
+        <div class="qr-panel">
+          <div id="qr-code" class="qr-code" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-wrap teacher-only" id="modelos">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Galeria docente</p>
+          <h2>MODELOS EDUCATIVOS</h2>
+        </div>
+        <a class="button secondary" href="creator.html">Administrar</a>
+      </div>
+      <div class="gallery-grid" data-gallery-list></div>
+      <p class="helper-text" data-gallery-empty>No hay experiencias guardadas todavia.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Contacto: Mgtr. Paulina Torres Suarez</p>
+    <p><span data-current-year></span></p>
+  </footer>
+</body>
+</html>
+dad aumentada educativa gratuita desde el celular</h1>
         <p class="hero-copy">
           Publica una experiencia web estatica para que estudiantes escaneen un codigo QR,
           apunten la camara a una imagen marcador y vean un modelo 3D sobre ella.
